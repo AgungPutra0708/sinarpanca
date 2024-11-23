@@ -11,11 +11,10 @@
                             @method('PUT')
 
                             <div class="form-group">
-                                <label for="client">Happy Clients*</label>
+                                <label for="client">Clients*</label>
                                 <input type="text" name="client" id="client"
-                                    class="form-control @error('client') is-invalid @enderror"
-                                    placeholder="Insert Happy Clients" required
-                                    value="{{ old('client', $dataHome->client) }}"
+                                    class="form-control @error('client') is-invalid @enderror" placeholder="Insert Clients"
+                                    required value="{{ old('client', $dataHome->client) }}"
                                     onkeypress="return /[0-9]/.test(event.key)">
                                 @error('client')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -35,10 +34,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="business">Year In Business*</label>
+                                <label for="business">Expertise*</label>
                                 <input type="text" name="business" id="business"
                                     class="form-control @error('business') is-invalid @enderror"
-                                    placeholder="Insert Year In Business" required
+                                    placeholder="Insert Expertise" required
                                     value="{{ old('business', $dataHome->business) }}"
                                     onkeypress="return /[0-9]/.test(event.key)">
                                 @error('business')

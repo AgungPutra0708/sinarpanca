@@ -1,7 +1,23 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
-    <div class="footer-top">
-        <div class="container">
+    <div class="footer-top" style="position: relative; overflow: hidden;">
+        <!-- Background Blur -->
+        <div
+            style="
+            background-image: url('{{ asset('img/footer.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            /* filter: blur(5px); */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;">
+        </div>
+
+        <!-- Konten Footer -->
+        <div class="container" style="position: relative; z-index: 1;">
             <div class="row">
                 <!-- Logo and Tagline Section -->
                 <div
@@ -9,7 +25,7 @@
                     <h1 class="logo">
                         <a href="{{ route('home') }}">
                             <img src="{{ asset('img/' . $companyData->logo) }}" alt="Logo"
-                                style="width: 100%; max-width: 350px;">
+                                style="width: 100%; max-width: 350px; object-fit: contain;">
                         </a>
                     </h1>
                     <h5 class="mt-3">{{ $companyData->motto }}</h5>
@@ -42,6 +58,19 @@
                     </ul>
                 </div>
             </div>
+        </div>
+
+        <!-- Overlay Transparan -->
+        <div
+            style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(255 255 255 / 45%);
+            z-index: 0;
+            ">
         </div>
     </div>
 </footer>

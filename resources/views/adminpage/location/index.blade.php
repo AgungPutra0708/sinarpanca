@@ -23,10 +23,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="branch_office">Branch Office*</label>
+                                <label for="branch_office">Workshop*</label>
                                 <input type="text" name="branch_office" id="branch_office"
                                     class="form-control @error('branch_office') is-invalid @enderror"
-                                    placeholder="Insert Branch Office" required
+                                    placeholder="Insert Workshop" required
                                     value="{{ old('branch_office', $dataLocation->branch_office) }}"
                                     onkeypress="return /[0-9]/.test(event.key)">
                                 @error('branch_office')

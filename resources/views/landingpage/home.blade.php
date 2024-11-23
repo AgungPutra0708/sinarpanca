@@ -54,7 +54,7 @@
                         </div>
                         <div class="text-content">
                             <h3>{{ $homeData->client }}</h3>
-                            <p class="highlighted-text">Happy Clients</p>
+                            <p class="highlighted-text">Clients</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="text-content">
                             <h3>{{ $homeData->business }}</h3>
-                            <p class="highlighted-text">Year In Business</p>
+                            <p class="highlighted-text">Expertise</p>
                         </div>
                     </div>
                 </div>

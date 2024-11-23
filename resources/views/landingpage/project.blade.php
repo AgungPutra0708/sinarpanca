@@ -12,7 +12,7 @@
         <!-- Project Now Carousel (for 'Now' projects) -->
         <section id="projects-now" class="projects section-bg">
             <div class="container">
-                <h3>Now</h3>
+                <h3>On Going</h3>
                 <div id="projectNowCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($projectsNow->chunk(3) as $projectChunk)
@@ -60,8 +60,9 @@
                             <div class="box">
                                 <img src="{{ asset('img/' . $project->picture_project) }}"
                                     alt="{{ $project->name_project }}" class="img-fluid">
-                                <h3>{{ $project->name_project }}</h3>
-                                <h4>{{ $project->location_project }}</h4>
+                                <h4 class="mb-0">{{ $project->name_project }}</h4>
+                                <h5 class="mb-0">{{ $project->location_project }}</h5>
+                                <h5>{{ $project->year_project }}</h5>
                             </div>
                         </div>
                     @endforeach

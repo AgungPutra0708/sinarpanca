@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card mb-4">
-                    <div class="card-header">Setting Home</div>
+                    <div class="card-header">Setting About</div>
                     <div class="card-body">
                         <form action="{{ route('set-about.update', Crypt::encrypt($dataAbout->id)) }}" method="post">
                             @csrf
