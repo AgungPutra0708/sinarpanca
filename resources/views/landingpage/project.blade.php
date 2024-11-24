@@ -23,8 +23,9 @@
                                             <div class="box">
                                                 <img src="{{ asset('img/' . $project->picture_project) }}"
                                                     alt="{{ $project->name_project }}" class="img-fluid">
-                                                <h3>{{ $project->name_project }}</h3>
-                                                <h4>{{ $project->location_project }}</h4>
+                                                <h4 class="mb-0">{{ $project->name_project }}</h4>
+                                                <h5 class="mb-0">{{ $project->location_project }}</h5>
+                                                <h5>{{ $project->year_project }}</h5>
                                             </div>
                                         </div>
                                     @endforeach

@@ -75,7 +75,7 @@
                             <img src="{{ asset('img/strategy.png') }}" alt="" class="img-fluid">
                         </div>
                         <div class="text-content">
-                            <h3>{{ $homeData->business }}</h3>
+                            <h3>{{ $homeData->expertise }}</h3>
                             <p class="highlighted-text">Expertise</p>
                         </div>
                     </div>

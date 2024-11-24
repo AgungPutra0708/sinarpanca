@@ -61,7 +61,7 @@ class HomeController extends Controller
         $validatedData = $request->validate([
             'client' => 'required|integer',
             'project' => 'required|integer',
-            'business' => 'required|integer',
+            'expertise' => 'required|integer',
         ]);
 
         $id = Crypt::decrypt($id);

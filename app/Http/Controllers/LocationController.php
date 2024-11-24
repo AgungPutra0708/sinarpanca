@@ -61,13 +61,13 @@ class LocationController extends Controller
         // Validasi input
         $request->validate([
             'head_office' => 'required',
-            'branch_office' => 'required',
+            'workshop' => 'required',
             'maps' => 'required',
         ]);
 
         $data = [
             'head_office' => $request->head_office,
-            'branch_office' => $request->branch_office,
+            'workshop' => $request->workshop,
             'maps' => $request->maps,
         ];
 

@@ -23,13 +23,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="branch_office">Workshop*</label>
-                                <input type="text" name="branch_office" id="branch_office"
-                                    class="form-control @error('branch_office') is-invalid @enderror"
+                                <label for="workshop">Workshop*</label>
+                                <input type="text" name="workshop" id="workshop"
+                                    class="form-control @error('workshop') is-invalid @enderror"
                                     placeholder="Insert Workshop" required
-                                    value="{{ old('branch_office', $dataLocation->branch_office) }}"
+                                    value="{{ old('workshop', $dataLocation->workshop) }}"
                                     onkeypress="return /[0-9]/.test(event.key)">
-                                @error('branch_office')
+                                @error('workshop')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>

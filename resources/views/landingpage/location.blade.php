@@ -29,7 +29,7 @@
                     <div class="col-lg-6">
                         <div class="address">
                             <h2 class="text-center">Workshop</h2>
-                            <p>{{ $locationData->branch_office }}</p>
+                            <p>{{ $locationData->workshop }}</p>
                         </div>
                     </div>
                 </div>

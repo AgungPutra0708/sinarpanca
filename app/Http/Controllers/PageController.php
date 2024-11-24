@@ -76,7 +76,7 @@ class PageController extends Controller
         ];
 
         // Pass the form's email field as the sender
-        Mail::to('sangmoduser@gmail.com')->send(new ContactMail($details, $validatedData['email']));
+        Mail::to('sinarpanca@gmail.com')->send(new ContactMail($details, $validatedData['email']));
 
         return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }

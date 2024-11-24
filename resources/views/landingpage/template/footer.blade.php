@@ -7,7 +7,7 @@
             background-image: url('{{ asset('img/footer.jpg') }}');
             background-size: cover;
             background-position: center;
-            /* filter: blur(5px); */
+            filter: blur(3px);
             position: absolute;
             top: 0;
             left: 0;
@@ -20,12 +20,12 @@
         <div class="container" style="position: relative; z-index: 1;">
             <div class="row">
                 <!-- Logo and Tagline Section -->
-                <div
-                    class="col-lg-6 col-md-6 footer-contact d-flex flex-column justify-content-center align-items-center text-center">
+                <div class="col-lg-6 col-md-6 footer-contact d-flex flex-column justify-content-center"
+                    style="margin-left: -55px;">
                     <h1 class="logo">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('img/' . $companyData->logo) }}" alt="Logo"
-                                style="width: 100%; max-width: 350px; object-fit: contain;">
+                            <img src="{{ asset('img/logofooter.png') }}" alt="Logo"
+                                style="width: 100%; max-width: 350px; object-fit: contain;margin-left: -25px;">
                         </a>
                     </h1>
                     <h5 class="mt-3">{{ $companyData->motto }}</h5>
