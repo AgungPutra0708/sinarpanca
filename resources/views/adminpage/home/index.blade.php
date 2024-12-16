@@ -34,13 +34,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="expertise">Expertise*</label>
-                                <input type="text" name="expertise" id="expertise"
-                                    class="form-control @error('expertise') is-invalid @enderror"
+                                <label for="worker">Expertise*</label>
+                                <input type="text" name="worker" id="worker"
+                                    class="form-control @error('worker') is-invalid @enderror"
                                     placeholder="Insert Expertise" required
-                                    value="{{ old('expertise', $dataHome->expertise) }}"
+                                    value="{{ old('worker', $dataHome->worker) }}"
                                     onkeypress="return /[0-9]/.test(event.key)">
-                                @error('expertise')
+                                @error('worker')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>

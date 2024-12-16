@@ -71,16 +71,79 @@
                 </div>
                 <div class="col-lg-4 col-4">
                     <div class="box">
-                        <div class="icon">
-                            <img src="{{ asset('img/strategy.png') }}" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-content">
-                            <h3>{{ $homeData->expertise }}</h3>
-                            <p class="highlighted-text">Expertise</p>
-                        </div>
+                        <a href="#worker" class="scroll-to-section">
+                            <div class="icon">
+                                <img src="{{ asset('img/strategy.png') }}" alt="" class="img-fluid">
+                            </div>
+                            <div class="text-content">
+                                <h3>{{ $homeData->worker }}</h3>
+                                <p class="highlighted-text">Worker</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ======= Worker Section ======= -->
+    <div id="worker">
+        <div class="section-title">
+            <div class="container" data-aos="fade-right">
+                <h2></h2>
+            </div>
+        </div>
+        <section class="section-bg">
+            <div class="container-fluid" data-aos="fade-right">
+                <div class="row justify-content-center">
+                    <!-- Gambar Utama -->
+                    <div class="col-lg-8 text-center" data-aos="zoom-in" data-aos-delay="150">
+                        <img src="{{ asset('img/workers-home.jpg') }}" class="img-fluid" alt=""
+                            style="max-width: 650px;" />
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center mt-4">
+                    <!-- Staff -->
+                    <div class="col-lg-4 text-center">
+                        <div class="worker-box">
+                            <img src="{{ asset('img/staff-worker.png') }}" class="img-fluid mb-3" alt="Staff"
+                                style="width: 250px;">
+                            <h4 class="mb-0">20++</h4>
+                            <h4>Staff</h4>
+                        </div>
+                    </div>
+                    <!-- Field Workers -->
+                    <div class="col-lg-4 text-center">
+                        <div class="worker-box">
+                            <img src="{{ asset('img/field-worker.png') }}" class="img-fluid" alt="Field Workers"
+                                style="width: 250px;">
+                            <h4 class="mb-0">200++</h4>
+                            <h4>Field Workers</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <!-- Deskripsi -->
+                    <div class="col-lg-10 text-center">
+                        <div class="content">
+                            <p>
+                                With more than 20 dedicated office staff and over 150 resilient field workers, we continue
+                                to
+                                move forward to deliver the best results and contribute to shared progress. Teamwork and
+                                dedication are the keys to our success in overcoming every challenge.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-title">
+            <div class="container" data-aos="fade-right">
+                <h2></h2>
+            </div>
+        </div>
+    </div>
+    <!-- End Worker Section -->
 @endsection

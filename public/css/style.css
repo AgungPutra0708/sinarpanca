@@ -131,7 +131,28 @@ h6 {
 }
 
 #header .logo img {
-    max-height: 40px;
+    max-height: 65px; /* Tinggi maksimal tetap */
+    max-width: 100%; /* Pastikan gambar tidak melampaui ukuran kontainer */
+    height: auto; /* Jaga proporsi gambar */
+    position: absolute;
+    top: 5px;
+    bottom: auto;
+    object-fit: contain; /* Menjaga agar gambar tidak terpotong */
+}
+
+/* Responsive for tablets */
+@media (max-width: 991px) {
+}
+
+/* Responsive for small tablets */
+@media (max-width: 768px) {
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 575px) {
+    #header .logo img {
+        width: 290px;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -476,7 +497,7 @@ h6 {
 
 /* Position container for boxes in the bottom right */
 .bottom-right-boxes {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     right: 0px;
     display: flex;
@@ -533,6 +554,22 @@ h6 {
     /* Primary color */
     padding-left: 8px;
     margin-top: 4px;
+}
+.worker-box {
+    display: inline-block;
+    text-align: center;
+    width: 100%; /* Default width */
+    max-width: 300px; /* Menyesuaikan dengan lebar gambar */
+    margin: 0 auto; /* Center alignment */
+}
+
+.worker-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.worker-box h4 {
+    font-weight: bold;
 }
 
 /* Responsive for large screens */

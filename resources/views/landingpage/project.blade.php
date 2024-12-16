@@ -9,13 +9,13 @@
             </div>
         </div>
 
-        <!-- Project Now Carousel (for 'Now' projects) -->
-        <section id="projects-now" class="projects section-bg">
+        <!-- Project On Going Carousel (for 'On Going' projects) -->
+        <section id="projects-on-going" class="projects section-bg">
             <div class="container">
                 <h3>On Going</h3>
-                <div id="projectNowCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div id="projectOnGoingCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        @foreach ($projectsNow->chunk(3) as $projectChunk)
+                        @foreach ($projectsOnGoing->chunk(3) as $projectChunk)
                             <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                 <div class="row">
                                     @foreach ($projectChunk as $project)
@@ -35,12 +35,12 @@
                     </div>
 
                     <!-- Carousel Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#projectNowCarousel"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#projectOnGoingCarousel"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#projectNowCarousel"
+                    <button class="carousel-control-next" type="button" data-bs-target="#projectOnGoingCarousel"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>

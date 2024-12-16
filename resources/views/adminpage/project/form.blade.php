@@ -82,9 +82,9 @@
                                 <label for="status_project">Project Status*</label>
                                 <select name="status_project" id="status_project"
                                     class="form-control @error('status_project') is-invalid @enderror" required>
-                                    <option value="now"
-                                        {{ old('status_project', $dataProject->status_project ?? '') == 'now' ? 'selected' : '' }}>
-                                        Now</option>
+                                    <option value="on going"
+                                        {{ old('status_project', $dataProject->status_project ?? '') == 'on going' ? 'selected' : '' }}>
+                                        On Going</option>
                                     <option value="completed"
                                         {{ old('status_project', $dataProject->status_project ?? '') == 'completed' ? 'selected' : '' }}>
                                         Completed</option>

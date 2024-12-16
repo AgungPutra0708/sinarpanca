@@ -31,10 +31,16 @@ class PageController extends Controller
     public function project()
     {
         // In your controller method
-        $projectsNow = ProjectModel::where('status_project', 'now')->get();
-        $projectsCompleted = ProjectModel::where('status_project', 'completed')->paginate(6);
+        $projectsOnGoing = ProjectModel::where('status_project', 'on going')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        $projectsCompleted = ProjectModel::where('status_project', 'completed')
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
+
         $companyData = CompanyModel::first();
-        return view('landingpage.project', compact('companyData', 'projectsNow', 'projectsCompleted'));
+        return view('landingpage.project', compact('companyData', 'projectsOnGoing', 'projectsCompleted'));
     }
 
     public function services()

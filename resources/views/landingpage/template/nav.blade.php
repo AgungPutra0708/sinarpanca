@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center">
         <h1 class="logo me-auto">
             <a href="{{ route('home') }}">
-                <img src="{{ asset('img/' . $companyData->logo) }}" alt="">
+                <img src="{{ asset('img/' . $companyData->logo) }}" alt="" class="img-fluid">
             </a>
         </h1>
         <!-- Uncomment below if you prefer to use an image logo -->

@@ -35,24 +35,24 @@ class AuthController extends Controller
         return redirect()->route('login');
     }
 
-    // public function updatePassword(Request $request)
-    // {
-    //     $request->validate([
-    //         'password' => 'required|confirmed|min:8',
-    //     ]);
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|confirmed|min:8',
+        ]);
 
-    //     // Debug: Check if user is authenticated
-    //     if (Auth::check()) {
-    //         // User is logged in
-    //         $user = Auth::user();
-    //     } else {
-    //         // User not authenticated
-    //         return response()->json(['error' => 'User not authenticated'], 401);
-    //     }
+        // Debug: Check if user is authenticated
+        if (Auth::check()) {
+            // User is logged in
+            $user = Auth::user();
+        } else {
+            // User not authenticated
+            return response()->json(['error' => 'User not authenticated'], 401);
+        }
 
-    //     $user->password = Hash::make($request->password);
-    //     $user->save();
+        $user->password = Hash::make($request->password);
+        $user->save();
 
-    //     return response()->json(['message' => 'Password updated successfully.']);
-    // }
+        return response()->json(['message' => 'Password updated successfully.']);
+    }
 }
