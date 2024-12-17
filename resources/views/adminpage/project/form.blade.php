@@ -29,6 +29,23 @@
                                 @enderror
                             </div>
 
+                            <!--service project-->
+                            <div class="form-group">
+                                <label for="service">Service Project*</label>
+                                <select id="service" name="service" class="form-control @error('service') is-invalid @enderror" required>
+                                    <option value="" disabled selected>-- Pilih Kategori --</option>
+                                    <option value="Project Management"
+                                        {{ old('service', $dataProject->service ?? '') == 'Project Management' ? 'selected' : '' }}>
+                                        Project Management</option>
+                                    <option value="Construction Management"
+                                        {{ old('service', $dataProject->service ?? '') == 'Construction Management' ? 'selected' : '' }}>
+                                        Construction Management</option>    
+                                    <option value="Contructor MEP, Structure and Architect"
+                                        {{ old('service', $dataProject->service ?? '') == 'Contructor MEP, Structure and Architect' ? 'selected' : '' }}>
+                                        Contructor MEP, Structure and Architect</option>
+                                </select>
+                            </div>
+
                             <!-- Picture Upload with Preview -->
                             <div class="form-group">
                                 <label for="picture_project">Project Picture*</label>
@@ -57,7 +74,7 @@
 
                             <!-- Location Field -->
                             <div class="form-group">
-                                <label for="location_project">Project Location*</label>
+                                <label for="location_project" >Project Location*</label>
                                 <input type="text" name="location_project" id="location_project"
                                     class="form-control @error('location_project') is-invalid @enderror"
                                     value="{{ old('location_project', $dataProject->location_project ?? '') }}" required>
