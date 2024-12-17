@@ -19,6 +19,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Name</th>
+                                <th>Service</th>
                                 <th>Location</th>
                                 <th>Year</th>
                                 <th>Action</th>
@@ -45,6 +46,10 @@
                     {
                         data: 'name_project',
                         name: 'name_project'
+                    },
+                    {
+                        data: 'service',
+                        name: 'service'
                     },
                     {
                         data: 'location_project',
