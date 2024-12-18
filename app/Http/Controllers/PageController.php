@@ -45,7 +45,7 @@ class PageController extends Controller
 
     public function services()
     {
-        $serviceData = ServiceModel::all();
+        $serviceData = ServiceModel::with('details')->get();
         $companyData = CompanyModel::first();
         return view('landingpage.services', compact('serviceData', 'companyData'));
     }

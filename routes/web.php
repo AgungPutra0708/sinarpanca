@@ -9,6 +9,7 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ServiceDetailController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
@@ -30,6 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/set-about', AboutController::class);
     Route::resource('/set-project', ProjectController::class);
     Route::resource('/set-service', ServiceController::class);
+    Route::resource('/set-service-detail', ServiceDetailController::class);
     Route::resource('/set-location', LocationController::class);
     Route::resource('/set-company', CompanyController::class);
 

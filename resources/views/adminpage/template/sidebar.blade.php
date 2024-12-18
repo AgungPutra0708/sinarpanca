@@ -49,6 +49,13 @@
         </a>
     </li>
 
+    <li class="nav-item {{ Route::is('set-service-detail.index') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('set-service-detail.index') }}">
+            <i class="fa fa-handshake fa-fw"></i>
+            <span>Services Detail</span>
+        </a>
+    </li>
+
     <li class="nav-item {{ Route::is('set-location.index') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('set-location.index') }}">
             <i class="fa fa-map-marker fa-fw"></i>

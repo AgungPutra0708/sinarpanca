@@ -98,7 +98,7 @@
                 <div class="row justify-content-center">
                     <!-- Gambar Utama -->
                     <div class="col-lg-8 text-center" data-aos="zoom-in" data-aos-delay="150">
-                        <img src="{{ asset('img/workers-home.jpg') }}" class="img-fluid" alt=""
+                        <img src="{{ asset('img/' . $homeData->picture) }}" class="img-fluid" alt=""
                             style="max-width: 650px;" />
                     </div>
                 </div>
@@ -129,10 +129,7 @@
                     <div class="col-lg-10 text-center">
                         <div class="content">
                             <p>
-                                With more than 20 dedicated office staff and over 150 resilient field workers, we continue
-                                to
-                                move forward to deliver the best results and contribute to shared progress. Teamwork and
-                                dedication are the keys to our success in overcoming every challenge.
+                                {{ $homeData->description }}
                             </p>
                         </div>
                     </div>

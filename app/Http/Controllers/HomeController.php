@@ -62,12 +62,30 @@ class HomeController extends Controller
             'client' => 'required|integer',
             'project' => 'required|integer',
             'worker' => 'required|integer',
+            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // max size 2MB
+            'description' => 'nullable', // max size 2MB
         ]);
 
         $id = Crypt::decrypt($id);
 
         // Cari data berdasarkan ID
         $dataHome = HomeModel::findOrFail($id);
+
+        // Handle image upload if there is a new image
+        if ($request->hasFile('picture')) {
+            // Delete old image if exists
+            if ($dataHome->picture && file_exists(public_path('img/' . $dataHome->picture))) {
+                unlink(public_path('img/' . $dataHome->picture));
+            }
+
+            // Store new image
+            $imageName = time() . '.' . $request->picture->extension();
+            $request->picture->move(public_path('img'), $imageName);
+            $validatedData['picture'] = $imageName;
+        } else {
+            // Keep the current image if no new image is uploaded
+            $validatedData['picture'] = $dataHome->picture;
+        }
 
         // Update data
         $dataHome->update($validatedData);

@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class ServiceModel extends Model
+class ServiceDetailModel extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = "services";
+    protected $table = "services_detail";
 
     protected $guarded = [];
 
-    public function details()
+    public function service()
     {
-        return $this->hasMany(ServiceDetailModel::class, 'id_service', 'id');
+        return $this->belongsTo(ServiceModel::class, 'id_service', 'id');
     }
 }

@@ -12,7 +12,8 @@ class ProjectController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $dataProject = ProjectModel::select(['id', 'name_project', 'service', 'location_project', 'year_project', 'status_project']);
+            $dataProject = ProjectModel::select(['id', 'name_project', 'service', 'location_project', 'year_project', 'status_project'])
+                ->orderBy('id', 'desc'); // Order by the latest created_at;
             return datatables()->of($dataProject)
                 ->addIndexColumn() // Menambahkan kolom index (penomoran otomatis)
                 ->addColumn('no', function ($row) {
