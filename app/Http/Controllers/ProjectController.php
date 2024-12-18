@@ -12,7 +12,7 @@ class ProjectController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $dataProject = ProjectModel::select(['id', 'name_project','service', 'location_project', 'year_project', 'status_project']);
+            $dataProject = ProjectModel::select(['id', 'name_project', 'service', 'location_project', 'year_project', 'status_project']);
             return datatables()->of($dataProject)
                 ->addIndexColumn() // Menambahkan kolom index (penomoran otomatis)
                 ->addColumn('no', function ($row) {
@@ -48,7 +48,7 @@ class ProjectController extends Controller
             'picture_project' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'location_project' => 'required|string|max:255',
             'year_project' => 'required|integer',
-            'status_project' => 'required|in:now,completed',
+            'status_project' => 'required',
         ]);
 
         if ($request->hasFile('picture_project')) {
@@ -80,7 +80,7 @@ class ProjectController extends Controller
             'picture_project' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'location_project' => 'required|string|max:255',
             'year_project' => 'required|integer',
-            'status_project' => 'required|in:now,completed',
+            'status_project' => 'required',
         ]);
 
         $dataProject = ProjectModel::findOrFail($id);

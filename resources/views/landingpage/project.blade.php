@@ -22,7 +22,8 @@
                                         <div class="col-lg-4">
                                             <div class="box">
                                                 <img src="{{ asset('img/' . $project->picture_project) }}"
-                                                    alt="{{ $project->name_project }}" class="img-fluid">
+                                                    alt="{{ $project->name_project }}" class="img-fluid"
+                                                    style="width: 300px; height: 200px;">
                                                 <h4 class="mb-0">{{ $project->name_project }}</h4>
                                                 <h5 class="mb-0">{{ $project->service }}</h5>
                                                 <h5 class="mb-0">{{ $project->location_project }}</h5>
@@ -61,7 +62,8 @@
                         <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-delay="100">
                             <div class="box">
                                 <img src="{{ asset('img/' . $project->picture_project) }}"
-                                    alt="{{ $project->name_project }}" class="img-fluid">
+                                    alt="{{ $project->name_project }}" class="img-fluid"
+                                    style="width: 400px; height: 250px;">
                                 <h4 class="mb-0">{{ $project->name_project }}</h4>
                                 <h5 class="mb-0">{{ $project->service }}</h5>
                                 <h5 class="mb-0">{{ $project->location_project }}</h5>
